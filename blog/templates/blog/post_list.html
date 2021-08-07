@@ -5,5 +5,14 @@
 <body>
     <p>Hi there!</p>
     <h1>Good mornings</h1>
+    <ul>
+        {% for post in posts %}
+            <li>
+                <p>publicado: {{ post.published_date }}</p>
+                <h2><a href="">{{ post.title }}</a></h2>
+                <p>{{post.text|linebreaksbr}}</p>
+            </li>
+        {% endfor %}
+    </ul>
 </body>
 </html>
